@@ -76,6 +76,15 @@ if __name__ == '__main__':
     # above), we access the value of the argument using the the long form of
     # the keyword flag (removing the first two dashes and replacing any other
     # dashes with underscores)
+
+if args.quiet:
+    print("Shhh. Be vewy, vewy quiet, I'm hunting wabbits...")
+else:
+    print(
+        "The args after being processed by the argparse parser object:\n",
+        args)
+
+    print("Paths:", args.file_path)
     print("Number:", args.number)
     print("Threshold:", args.threshold)
     print("I am cool?", args.i_am_cool)
