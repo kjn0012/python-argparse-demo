@@ -48,6 +48,14 @@ if __name__ == '__main__':
         help = 'A boolean option.',
     )
 
+    # Adding another optinal keyword argument for quiet
+    parser.add_argument(
+        '-q', '--quiet',
+        action='store_true',
+        default=False,
+        help="Suppress normal output.",
+    )
+
     # Parse the command-line arguments into a 'dict'-like container
     args = parser.parse_args()
 
